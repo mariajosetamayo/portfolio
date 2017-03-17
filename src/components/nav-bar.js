@@ -10,20 +10,43 @@ class Navbar extends Component {
     this.onClickMenu = this.onClickMenu.bind(this);
   }
 
-
   onClickMenu (){
-    console.log('the click is working')
     this.setState({menuVisible: !this.state.menuVisible})
+  }
+
+  renderLineMenu (){
+    const sectionStyles = {
+      fontSize: '2.3em',
+      float: 'right',
+      paddingRight: '3%'
+    }
+    const sectionStyles2 = {
+      fontSize: '2.3em',
+      float: 'right',
+      paddingRight: '23%'
+    }
+    if(this.state.menuVisible){
+      return(
+        <i className="fa fa-bars fa-lg" aria-hidden="true" style = {sectionStyles2} onClick = {this.onClickMenu}></i>
+      )
+    }
+    else{
+      return(
+        <i className="fa fa-bars fa-lg" aria-hidden="true" style = {sectionStyles} onClick = {this.onClickMenu}></i>
+      )
+    }
   }
 
   render (){
     const navBarStyle = {
       position: 'fixed',
-      zIndex: '1'
+      zIndex: '1',
+      width: '100%'
     }
     const sectionStyles = {
       fontSize: '2.3em',
       float: 'right',
+      paddingRight: '3%'
 
     }
     const logoStyle = {
@@ -34,7 +57,7 @@ class Navbar extends Component {
     return(
       <div style={navBarStyle}>
         <img src={'../photos/mjSignature.png'} style={logoStyle}/>
-        <i className="fa fa-bars fa-lg" aria-hidden="true" style = {sectionStyles} onClick = {this.onClickMenu}></i>
+        {this.renderLineMenu()}
         {this.state.menuVisible ? <SideBar /> : null}
       </div>
 
