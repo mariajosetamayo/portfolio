@@ -31,8 +31,13 @@
     "nuka-carousel": "^2.0.4",
     "react": "^0.14.3",
     "react-dom": "^0.14.3",
+    "react-page-slider": "^1.2.1",
     "react-redux": "^4.0.0",
     "react-router": "^2.0.1",
-    "redux": "^3.0.4"
+    "react-scrollchor": "^2.2.0",
+    "react-slick": "^0.14.7",
+    "react-swipeable-views": "^0.11.1",
+    "redux": "^3.0.4",
+    "slick-carousel": "^1.6.0"
   }
 }

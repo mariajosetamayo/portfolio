@@ -18,11 +18,13 @@ class Navbar extends Component {
 
   render (){
     const navBarStyle = {
-      position: 'fixed'
+      position: 'fixed',
+      zIndex: '1'
     }
     const sectionStyles = {
       fontSize: '2.3em',
-      float: 'right'
+      float: 'right',
+
     }
     const logoStyle = {
       width: '39%',
