@@ -6,7 +6,7 @@ class ProjectsSlider extends Component {
   mixins: [Carousel.ControllerMixin]
   render() {
     const sliderStyles = {
-      marginTop: '38%',
+      marginTop: '45%',
       textAlign:'center',
     }
     return (

@@ -17,10 +17,28 @@ class Project extends Component {
       fontSize: '35px'
     }
 
+    const githubLogoStyles = {
+      fontSize: '3.3em',
+      color: '#282828'
+    }
+
+    const websiteLinkStyles = {
+      fontSize: '2.5em',
+      color: '#282828',
+      paddingLeft: '5%'
+    }
+
+    const descriptionStyles = {
+      fontSize: '18px',
+      padding: '1%'
+    }
+
     if(this.props.project === 'project1'){
       return(
         <div>
           <h2 style={titleStyles}>Outdoor Sagas</h2>
+          <p style={descriptionStyles}>Outdoor Sagas is a full-stack app that allows users to record, share, and save your adventure memories all in one place.</p>
+          <p><a href="https://github.com/mariajosetamayo/outdoor-sagas-app"><i className="fa fa-github fa-lg" aria-hidden="true" style={githubLogoStyles}></i></a><a href="https://outdoor-sagas.herokuapp.com/"><i className="fa fa-laptop" aria-hidden="true" style={websiteLinkStyles}></i></a></p>
           <img src={'../photos/outdoorSagas.jpg'} style={sectionStyles}/>
         </div>
       )
@@ -29,6 +47,8 @@ class Project extends Component {
       return(
         <div>
           <h2 style={titleStyles}>FoodTrack</h2>
+          <p style={descriptionStyles}>FoodTrack is an application to keep track of what you eat, get recommendations based on the foods nutritional information, and get a daily report summarizing the name and quantity of the nutrients you consumed.</p>
+          <p><a href="https://github.com/mariajosetamayo/foodTrack"><i className="fa fa-github fa-lg" aria-hidden="true" style={githubLogoStyles}></i></a><a href="https://intense-badlands-10213.herokuapp.com/"><i className="fa fa-laptop" aria-hidden="true" style={websiteLinkStyles}></i></a></p>
           <img src={'../photos/foodTrackScreenShot2.jpg'} style={sectionStyles}/>
         </div>
       )
@@ -37,6 +57,8 @@ class Project extends Component {
       return(
         <div>
           <h2 style={titleStyles}>Muncheck</h2>
+          <p style={descriptionStyles}>Muncheck is an app to check the  nutritional facts about most any food item and whether it is recommended given a particular dietary requirement (diabetes, kidney disease and weight loss).</p>
+          <p><a href="https://github.com/mariajosetamayo/muncheck"><i className="fa fa-github fa-lg" aria-hidden="true" style={githubLogoStyles}></i></a><a href="https://mariajosetamayo.github.io/muncheck/"><i className="fa fa-laptop" aria-hidden="true" style={websiteLinkStyles}></i></a></p>
           <img src={'../photos/muncheck.jpg'} style={sectionStyles}/>
         </div>
       )

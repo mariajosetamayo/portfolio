@@ -1,13 +1,24 @@
 import React, {Component} from 'react';
+import Scrollchor from 'react-scrollchor';
 import SideBar from './side-bar';
 
 class Navbar extends Component {
   constructor(props){
     super(props);
     this.state = {
-      menuVisible: false
+      menuVisible: false,
+      transform: false,
+      distanceFromTop: 0,
     };
     this.onClickMenu = this.onClickMenu.bind(this);
+  }
+
+  componentDidMount () {
+    window.addEventListener('scroll', this.handleScroll);
+  }
+
+  componentWillUnmount () {
+      window.removeEventListener('scroll', this.handleScroll);
   }
 
   onClickMenu (){
@@ -39,11 +50,22 @@ class Navbar extends Component {
     }
   }
 
+  handleScroll = () => {
+    const self = this
+    if(this.scrollIcon !== null){
+      self.setState({
+        distanceFromTop: document.body.scrollTop,
+      })
+    }
+  }
+
   render (){
+    const self = this
     const navBarStyle = {
       position: 'fixed',
       zIndex: '1',
-      width: '100%'
+      width: '100%',
+      backgroundColor: 'rgba(255, 255, 255,' + 0.001*self.state.distanceFromTop + ')'
     }
     const sectionStyles = {
       fontSize: '2.3em',
@@ -57,8 +79,8 @@ class Navbar extends Component {
       marginLeft: '1%'
     }
     return(
-      <div style={navBarStyle}>
-        <img src={'../photos/signaturemj.png'} style={logoStyle}/>
+      <div id={"navbar"} style={navBarStyle} ref={(ref) => this.scrollIcon = ref} >
+        <Scrollchor to="#homeSection" animate={{duration: 900}}><img src={'../photos/signaturemj.png'} style={logoStyle}/></Scrollchor>
         {this.renderLineMenu()}
         {this.state.menuVisible ? <SideBar /> : null}
       </div>
