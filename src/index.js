@@ -8,18 +8,5 @@ import ProjectsSlider from './components/projects';
 import AboutMe from './components/about-me';
 import Contact from './components/contact';
 
-const routes = (
-    <Router history={hashHistory}>
-        <Route path="/" component={App}>
-            <Route path = 'projects' component={ProjectsSlider} />
-            <Route path = 'about-me' component={AboutMe} />
-            <Route path='contact' component={Contact} />
-        </Route>
-    </Router>
-);
 
-// document.addEventListener('DOMContentLoaded', () =>
-//     ReactDOM.render(routes, document.getElementById('app'))
-// );
-
-ReactDOM.render(routes, document.querySelector('.app'));
+ReactDOM.render(<App />, document.querySelector('.app'));

@@ -4,11 +4,6 @@ import Scrollchor from 'react-scrollchor';
 
 export default function SideBar (props){
   const sectionStyles = {
-    // backgroundColor: 'red',
-    // width: '20%',
-    // float: 'right',
-    // clear: 'right',
-    // textAlign: 'center'
     display: 'block',
     left: 'auto',
     right: '0px',
@@ -17,7 +12,7 @@ export default function SideBar (props){
     height: '100%',
     zIndex: '999999',
     width: '260px',
-    backgroundColor: '#171617',
+    backgroundColor: 'rgba(112, 112, 112, 0.9)',
     color: '#FFF',
     width: '20%',
     textAlign: 'center'

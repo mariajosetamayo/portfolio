@@ -18,12 +18,14 @@ class Navbar extends Component {
     const sectionStyles = {
       fontSize: '2.3em',
       float: 'right',
-      paddingRight: '3%'
+      paddingRight: '3%',
+      marginTop: '1%'
     }
     const sectionStyles2 = {
       fontSize: '2.3em',
       float: 'right',
-      paddingRight: '23%'
+      paddingRight: '23%',
+      marginTop: '1%'
     }
     if(this.state.menuVisible){
       return(
@@ -50,13 +52,13 @@ class Navbar extends Component {
 
     }
     const logoStyle = {
-      width: '39%',
-      marginTop: '-8%',
-      marginLeft: '-15%'
+      width: '43px',
+      marginTop: '1%',
+      marginLeft: '1%'
     }
     return(
       <div style={navBarStyle}>
-        <img src={'../photos/mjSignature.png'} style={logoStyle}/>
+        <img src={'../photos/signaturemj.png'} style={logoStyle}/>
         {this.renderLineMenu()}
         {this.state.menuVisible ? <SideBar /> : null}
       </div>

@@ -9,31 +9,35 @@ class Project extends Component {
 
   renderProject(){
     const sectionStyles={
-      maxWidth: '100%',
+      maxWidth: '80%',
       height: 'auto',
+    }
+
+    const titleStyles = {
+      fontSize: '35px'
     }
 
     if(this.props.project === 'project1'){
       return(
         <div>
-          <h2>cat</h2>
-          <img src='http://placekitten.com/g/1000/500' style={sectionStyles}/>
+          <h2 style={titleStyles}>Outdoor Sagas</h2>
+          <img src={'../photos/outdoorSagas.jpg'} style={sectionStyles}/>
         </div>
       )
     }
     else if(this.props.project === 'project2'){
       return(
         <div>
-          <h2>cat2</h2>
-          <img src='http://placekitten.com/g/1000/500' style={sectionStyles}/>
+          <h2 style={titleStyles}>FoodTrack</h2>
+          <img src={'../photos/foodTrackScreenShot2.jpg'} style={sectionStyles}/>
         </div>
       )
     }
     else if(this.props.project === 'project3'){
       return(
         <div>
-          <h2>cat3</h2>
-          <img src='http://placekitten.com/g/1000/500' style={sectionStyles}/>
+          <h2 style={titleStyles}>Muncheck</h2>
+          <img src={'../photos/muncheck.jpg'} style={sectionStyles}/>
         </div>
       )
     }

@@ -8,3 +8,8 @@ html{
 	margin-right: auto;
 	width: 400px;
 }
+
+a{
+  text-decoration: none;
+  color: #DDDDDD;
+}
