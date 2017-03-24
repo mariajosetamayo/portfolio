@@ -1,5 +1,5 @@
 html{
-  font-family: 'Palanquin', sans-serif;
+  font-family: 'Quicksand', sans-serif;
   background-color: #F9F9F9;
 }
 
@@ -16,4 +16,12 @@ body{
 a{
   text-decoration: none;
   color: #DDDDDD;
+}
+
+hr{
+  width: 82%;
+}
+
+.fa-3x{
+  padding-top: 300%;
 }

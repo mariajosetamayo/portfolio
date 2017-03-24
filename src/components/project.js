@@ -14,7 +14,8 @@ class Project extends Component {
     }
 
     const titleStyles = {
-      fontSize: '35px'
+      fontSize: '30px',
+      color: '#707070'
     }
 
     const githubLogoStyles = {
@@ -37,7 +38,7 @@ class Project extends Component {
       return(
         <div>
           <h2 style={titleStyles}>Outdoor Sagas</h2>
-          <p style={descriptionStyles}>Outdoor Sagas is a full-stack app that allows users to record, share, and save your adventure memories all in one place.</p>
+          <p style={descriptionStyles}>Outdoor Sagas is a full-stack app that allows users to record, share, and save adventure memories in one place.</p>
           <p><a href="https://github.com/mariajosetamayo/outdoor-sagas-app"><i className="fa fa-github fa-lg" aria-hidden="true" style={githubLogoStyles}></i></a><a href="https://outdoor-sagas.herokuapp.com/"><i className="fa fa-laptop" aria-hidden="true" style={websiteLinkStyles}></i></a></p>
           <img src={'../photos/outdoorSagas.jpg'} style={sectionStyles}/>
         </div>
@@ -47,7 +48,7 @@ class Project extends Component {
       return(
         <div>
           <h2 style={titleStyles}>FoodTrack</h2>
-          <p style={descriptionStyles}>FoodTrack is an application to keep track of what you eat, get recommendations based on the foods nutritional information, and get a daily report summarizing the name and quantity of the nutrients you consumed.</p>
+          <p style={descriptionStyles}>FoodTrack is a full-stack application to keep track of what you eat, get recommendations, and a daily report summarizing the nutrients you consumed.</p>
           <p><a href="https://github.com/mariajosetamayo/foodTrack"><i className="fa fa-github fa-lg" aria-hidden="true" style={githubLogoStyles}></i></a><a href="https://intense-badlands-10213.herokuapp.com/"><i className="fa fa-laptop" aria-hidden="true" style={websiteLinkStyles}></i></a></p>
           <img src={'../photos/foodTrackScreenShot2.jpg'} style={sectionStyles}/>
         </div>

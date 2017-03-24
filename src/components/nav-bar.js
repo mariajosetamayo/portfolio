@@ -30,17 +30,19 @@ class Navbar extends Component {
       fontSize: '2.3em',
       float: 'right',
       paddingRight: '3%',
-      marginTop: '1%'
+      marginTop: '1.4%',
+      color: '#707070'
     }
     const sectionStyles2 = {
       fontSize: '2.3em',
       float: 'right',
       paddingRight: '23%',
-      marginTop: '1%'
+      marginTop: '1.4%',
+      color: '#707070'
     }
     if(this.state.menuVisible){
       return(
-        <i className="fa fa-bars fa-lg" aria-hidden="true" style = {sectionStyles2} onClick = {this.onClickMenu}></i>
+        <i className="fa fa-close" style = {sectionStyles2} onClick = {this.onClickMenu}></i>
       )
     }
     else{
@@ -65,7 +67,8 @@ class Navbar extends Component {
       position: 'fixed',
       zIndex: '1',
       width: '100%',
-      backgroundColor: 'rgba(255, 255, 255,' + 0.001*self.state.distanceFromTop + ')'
+      // backgroundColor: 'rgba(255, 255, 255,' + 0.001*self.state.distanceFromTop + ')'
+      backgroundColor: 'rgba(200, 200, 200,' + 0.001*self.state.distanceFromTop + ')'
     }
     const sectionStyles = {
       fontSize: '2.3em',
@@ -74,13 +77,14 @@ class Navbar extends Component {
 
     }
     const logoStyle = {
-      width: '43px',
+      width: '63px',
       marginTop: '1%',
-      marginLeft: '1%'
+      marginLeft: '3%',
+      paddingBottom: '1%'
     }
     return(
       <div id={"navbar"} style={navBarStyle} ref={(ref) => this.scrollIcon = ref} >
-        <Scrollchor to="#homeSection" animate={{duration: 900}}><img src={'../photos/signaturemj.png'} style={logoStyle}/></Scrollchor>
+        <Scrollchor to="#homeSection" animate={{duration: 900}}><img src={'../photos/MJTsignature.png'} style={logoStyle}/></Scrollchor>
         {this.renderLineMenu()}
         {this.state.menuVisible ? <SideBar /> : null}
       </div>

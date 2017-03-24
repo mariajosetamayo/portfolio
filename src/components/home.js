@@ -12,10 +12,15 @@ export default function Home (props){
   const profStyle = {
     color:'#707070'
   }
+
+  const dividerStyle = {
+    width: '40%',
+  }
   return (
     <div style={sectionStyle}>
       <h1 style= {nameStyle}>Maria Jose Tamayo</h1>
-      <h3 style={profStyle}>Full Stack Web Developer</h3>
+      <hr style={ dividerStyle}/>
+      <h3 style={profStyle}>Full Stack Web Developer, MIPH</h3>
     </div>
   )
 }
