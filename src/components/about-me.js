@@ -31,7 +31,7 @@ export default function AboutMe (props){
     marginBottom: '-26%'
   }
   return (
-    <div style={sectionStyle}>
+    <div className="aboutMeSection" style={sectionStyle}>
       <hr />
       <h1 style= {nameStyle}>About Maria</h1>
       <img src={'../photos/myPhoto.jpg'} style={photoStyle}/>

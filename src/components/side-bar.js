@@ -18,7 +18,7 @@ export default function SideBar (props){
     textAlign: 'center'
   }
   return (
-    <div style={sectionStyles}>
+    <div className="sideBar" style={sectionStyles}>
       <Scrollchor to="#homeSection" animate={{duration: 900}}>
         <h2>
           Home

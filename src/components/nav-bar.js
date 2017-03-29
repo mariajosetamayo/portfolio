@@ -42,7 +42,7 @@ class Navbar extends Component {
     }
     if(this.state.menuVisible){
       return(
-        <i className="fa fa-close" style = {sectionStyles2} onClick = {this.onClickMenu}></i>
+        <i className="fa fa-close closeIcon" style = {sectionStyles2} onClick = {this.onClickMenu}></i>
       )
     }
     else{
@@ -68,7 +68,7 @@ class Navbar extends Component {
       zIndex: '1',
       width: '100%',
       // backgroundColor: 'rgba(255, 255, 255,' + 0.001*self.state.distanceFromTop + ')'
-      backgroundColor: 'rgba(200, 200, 200,' + 0.001*self.state.distanceFromTop + ')'
+      backgroundColor: 'rgba(240, 240, 240,' + 0.001*self.state.distanceFromTop + ')'
     }
     const sectionStyles = {
       fontSize: '2.3em',

@@ -25,3 +25,45 @@ hr{
 .fa-3x{
   padding-top: 300%;
 }
+
+/*------------------------------------------------------------
+       Media Queries
+--------------------------------------------------------------*/
+
+@media (min-width: 0px) and (max-width: 650px) {
+  .fa-3x{
+    font-size: 1.2em !important;
+  }
+
+  .projectDescription{
+    font-size: 14px !important;
+  }
+
+  .projectName{
+    font-size: 20px !important;
+  }
+
+  .github, .laptop{
+    font-size: 2.0em !important;
+  }
+
+  .aboutMeSection{
+    padding-top: 78px !important;
+  }
+
+  .sideBar{
+    width: 39% !important;
+  }
+
+  .closeIcon{
+    padding-right: 43% !important;
+  }
+
+  .fa-chevron-circle-right{
+    margin-left: 42% !important;
+  }
+
+  .fa-chevron-circle-left{
+    margin-left: -80% !important;
+  }
+}
