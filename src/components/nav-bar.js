@@ -84,7 +84,7 @@ class Navbar extends Component {
     }
     return(
       <div id={"navbar"} style={navBarStyle} ref={(ref) => this.scrollIcon = ref} >
-        <Scrollchor to="#homeSection" animate={{duration: 900}}><img src={'../photos/MJTsignature.png'} style={logoStyle}/></Scrollchor>
+        <Scrollchor to="#homeSection" animate={{duration: 900}}><img className = "signature" src={'../photos/MJTsignature.png'} style={logoStyle}/></Scrollchor>
         {this.renderLineMenu()}
         {this.state.menuVisible ? <SideBar /> : null}
       </div>
