@@ -13,17 +13,16 @@ class ProjectsSlider extends Component {
     const titleStyle = {
       fontSize: '40px',
       color: '#282828',
-      marginBottom: '1%'
+      marginBottom: '-2%'
     }
+
     return (
       <div style={sliderStyles}>
         <hr />
         <h1 style={titleStyle}>Projects</h1>
-        <Carousel ref="carousel" cellAlign="center" decorators={CarouselArrows}>
-         <Project project='project1'/>
-         <Project project='project2'/>
-         <Project project='project3'/>
-        </Carousel>
+        <Project project='project1' />
+        <Project project='project2' />
+        <Project project='project3' />
       </div>
     );
   }

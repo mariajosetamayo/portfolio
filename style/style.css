@@ -35,22 +35,22 @@ hr{
   .signature{
     margin-left: 0% !important;
   }
-  
+
   .fa-3x{
     font-size: 1.2em !important;
   }
 
-  .projectDescription{
-    font-size: 12px !important;
-  }
+  /*.projectDescription{
+    font-size: 1px !important;
+  }*/
 
-  .projectName{
+  /*.projectName{
     font-size: 15px !important;
-  }
+  }*/
 
-  .github, .laptop{
+  /*.github, .laptop{
     font-size: 2.0em !important;
-  }
+  }*/
 
   .aboutMeSection{
     padding-top: 78px !important;

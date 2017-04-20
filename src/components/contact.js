@@ -12,7 +12,8 @@ export default function Contact (props){
   }
   const profStyle = {
     color:'#707070',
-    fontSize: '20px'
+    fontSize: '20px',
+    padding: '3%'
   }
 
   const websiteLinkStyles = {
