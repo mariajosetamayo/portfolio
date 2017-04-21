@@ -42,7 +42,7 @@ class Project extends Component {
       return(
         <div style={projectsStyle}>
           <h2 className = "projectName" style={titleStyles}>Outdoor Sagas</h2>
-          <p className="projectDescription" style={descriptionStyles}>Outdoor Sagas is a full-stack application that allows users to record, share, and save adventure memories in one place.</p>
+          <p className="projectDescription" style={descriptionStyles}>Outdoor Sagas is a full-stack application that allows users to record, share, and save memories of their outdoor adventures in one place.</p>
           <p><a href="https://github.com/mariajosetamayo/outdoor-sagas-app"><i className="fa fa-github fa-lg github" aria-hidden="true" style={githubLogoStyles}></i></a><a href="https://outdoor-sagas.herokuapp.com/" target="_blank"><i className="fa fa-link laptop" aria-hidden="true" style={websiteLinkStyles}></i></a></p>
           <img src={'../photos/outdoorSagas.jpg'} style={sectionStyles}/>
         </div>
@@ -62,7 +62,7 @@ class Project extends Component {
       return(
         <div style={projectsStyle}>
           <h2 className = "projectName" style={titleStyles}>Muncheck</h2>
-          <p className="projectDescription" style={descriptionStyles}>Muncheck is an app to check the  nutritional facts about most any food item and whether it is recommended given a particular dietary requirement (diabetes, kidney disease and weight loss).</p>
+          <p className="projectDescription" style={descriptionStyles}>Muncheck is an application to check the  nutritional facts about most any food item and whether it is recommended given a particular dietary requirement (diabetes, kidney disease and weight loss).</p>
           <p><a href="https://github.com/mariajosetamayo/muncheck"><i className="fa fa-github fa-lg github" aria-hidden="true" style={githubLogoStyles}></i></a><a href="https://mariajosetamayo.github.io/muncheck/" target="_blank"><i className="fa fa-link laptop" aria-hidden="true" style={websiteLinkStyles}></i></a></p>
           <img src={'../photos/muncheckNew.png'} style={sectionStyles}/>
         </div>
