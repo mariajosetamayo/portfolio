@@ -31,14 +31,14 @@ class Navbar extends Component {
       float: 'right',
       paddingRight: '3%',
       marginTop: '1.4%',
-      color: '#707070'
+      color: '#434343'
     }
     const sectionStyles2 = {
       fontSize: '2.3em',
       float: 'right',
       paddingRight: '23%',
       marginTop: '1.4%',
-      color: '#707070'
+      color: '#434343'
     }
     if(this.state.menuVisible){
       return(
@@ -67,7 +67,7 @@ class Navbar extends Component {
       position: 'fixed',
       zIndex: '1',
       width: '100%',
-      backgroundColor: 'rgba(76, 75, 75,' + 0.001*self.state.distanceFromTop + ')'
+      backgroundColor: 'rgba(109, 104, 104,' + 0.001*self.state.distanceFromTop + ')'
       // backgroundColor: 'rgba(240, 240, 240,' + 0.001*self.state.distanceFromTop + ')'
     }
     const sectionStyles = {

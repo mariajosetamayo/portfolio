@@ -4,7 +4,7 @@ import Project from './project';
 import CarouselArrows from './carouselArrows'
 
 class ProjectsSlider extends Component {
-  mixins: [Carousel.ControllerMixin]
+  // mixins: [Carousel.ControllerMixin]
   render() {
     const sliderStyles = {
       marginTop: '45%',
