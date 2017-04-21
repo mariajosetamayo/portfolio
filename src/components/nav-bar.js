@@ -67,7 +67,7 @@ class Navbar extends Component {
       position: 'fixed',
       zIndex: '1',
       width: '100%',
-      backgroundColor: 'rgba(109, 104, 104,' + 0.001*self.state.distanceFromTop + ')'
+      backgroundColor: 'rgba(127, 124, 124,' + 0.001*self.state.distanceFromTop + ')'
       // backgroundColor: 'rgba(240, 240, 240,' + 0.001*self.state.distanceFromTop + ')'
     }
     const sectionStyles = {
