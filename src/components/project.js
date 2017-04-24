@@ -53,7 +53,7 @@ class Project extends Component {
         <div style={projectsStyle}>
           <h2 className = "projectName" style={titleStyles}>FoodTrack</h2>
           <p className="projectDescription" style={descriptionStyles}>FoodTrack is a full-stack application to keep track of what you eat, get recommendations, and a daily report summarizing the nutrients you consumed.</p>
-          <p><a href="https://github.com/mariajosetamayo/foodTrack"><i className="fa fa-github fa-lg github" aria-hidden="true" style={githubLogoStyles}></i></a><a href="https://intense-badlands-10213.herokuapp.com/" target="_blank"><i className="fa fa-link laptop" aria-hidden="true" style={websiteLinkStyles}></i></a></p>
+          <p><a href="https://github.com/mariajosetamayo/foodTrack"><i className="fa fa-github fa-lg github" aria-hidden="true" style={githubLogoStyles}></i></a><a href="https://food-track.herokuapp.com/" target="_blank"><i className="fa fa-link laptop" aria-hidden="true" style={websiteLinkStyles}></i></a></p>
           <img src={'../photos/foodTrackScreenShot2.jpg'} style={sectionStyles}/>
         </div>
       )
@@ -72,7 +72,7 @@ class Project extends Component {
 
   render() {
     return (
-      <div >
+      <div>
         {this.renderProject()}
       </div>
     );
