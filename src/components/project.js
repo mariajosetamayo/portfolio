@@ -44,7 +44,7 @@ class Project extends Component {
           <h2 className = "projectName" style={titleStyles}>Outdoor Sagas</h2>
           <p className="projectDescription" style={descriptionStyles}>Outdoor Sagas is a full-stack application that allows users to record, share, and save memories of their outdoor adventures in one place.</p>
           <p><a href="https://github.com/mariajosetamayo/outdoor-sagas-app"><i className="fa fa-github fa-lg github" aria-hidden="true" style={githubLogoStyles}></i></a><a href="https://outdoor-sagas.herokuapp.com/" target="_blank"><i className="fa fa-link laptop" aria-hidden="true" style={websiteLinkStyles}></i></a></p>
-          <img src={'../photos/outdoorSagas.jpg'} style={sectionStyles}/>
+          <img src={'../photos/outdoorSagasNew.jpg'} style={sectionStyles}/>
         </div>
       )
     }
