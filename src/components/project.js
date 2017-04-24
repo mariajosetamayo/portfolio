@@ -62,7 +62,7 @@ class Project extends Component {
       return(
         <div style={projectsStyle}>
           <h2 className = "projectName" style={titleStyles}>Muncheck</h2>
-          <p className="projectDescription" style={descriptionStyles}>Muncheck is an application to check the  nutritional facts about most any food item and whether it is recommended given a particular dietary requirement (diabetes, kidney disease and weight loss).</p>
+          <p className="projectDescription" style={descriptionStyles}>Muncheck is an application to check the  nutritional facts about almost any food item and whether it is recommended given a particular dietary requirement (diabetes, kidney disease and weight loss).</p>
           <p><a href="https://github.com/mariajosetamayo/muncheck"><i className="fa fa-github fa-lg github" aria-hidden="true" style={githubLogoStyles}></i></a><a href="https://mariajosetamayo.github.io/muncheck/" target="_blank"><i className="fa fa-link laptop" aria-hidden="true" style={websiteLinkStyles}></i></a></p>
           <img src={'../photos/muncheckNew.png'} style={sectionStyles}/>
         </div>
