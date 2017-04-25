@@ -15,11 +15,11 @@ class App extends Component {
     super(props)
     console.log(props)
   }
-  componentDidMount(){
-      this.props.dispatch(
-        actions.getCodeWarsInfo()
-      )
-  }
+  // componentDidMount(){
+  //     this.props.dispatch(
+  //       actions.getCodeWarsInfo()
+  //     )
+  // }
   render() {
     return (
       <div>
