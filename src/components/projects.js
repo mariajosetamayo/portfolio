@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import Carousel from 'nuka-carousel';
 import Project from './project';
-import CarouselArrows from './carouselArrows'
+
 
 class ProjectsSlider extends Component {
   // mixins: [Carousel.ControllerMixin]
