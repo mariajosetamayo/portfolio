@@ -15,12 +15,12 @@ export default function AboutMe (props){
     fontSize: '20px'
   }
   const photoStyle = {
-    width: '315px',
+    width: '275px',
     borderRadius: '2px'
   }
 
   const textStyle = {
-    padding: '5%',
+    padding: '3%',
     fontSize: '20px'
   }
 

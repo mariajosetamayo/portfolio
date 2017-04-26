@@ -13,7 +13,6 @@ import Contact from './contact';
 class App extends Component {
   constructor(props){
     super(props)
-    console.log(props)
   }
   // componentDidMount(){
   //     this.props.dispatch(
