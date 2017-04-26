@@ -15,7 +15,7 @@ export default function AboutMe (props){
     fontSize: '20px'
   }
   const photoStyle = {
-    width: '300px',
+    width: '256px',
     borderRadius: '2px'
   }
 
