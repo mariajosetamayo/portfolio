@@ -35,8 +35,8 @@ export default function Contact (props){
   }
 
   const logosLineStyle = {
-    paddingTop: '7%',
-    paddingBottom: '7%'
+    paddingTop: '20px',
+    paddingBottom: '30px'
   }
   return (
     <div style={sectionStyle}>

@@ -21,14 +21,18 @@ export default function AboutMe (props){
 
   const textStyle = {
     padding: '3%',
-    fontSize: '20px'
+    fontSize: '20px',
+    padding: '20px 8%',
+    textAlign: 'left'
   }
 
   const textStyle2 = {
     padding: '5%',
     fontSize: '20px',
-    marginTop: '-7%',
-    marginBottom: '-26%'
+    marginTop: '-3%',
+    marginBottom: '-26%',
+    padding: '20px 8%',
+    textAlign: 'left'
   }
   return (
     <div className="aboutMeSection" style={sectionStyle}>

@@ -24,7 +24,7 @@ export default function SideBar (props){
           Home
         </h2>
       </Scrollchor>
-      <Scrollchor to="#projectsSection" animate={{duration: 900}}>
+      <Scrollchor to="#projectsSection" animate={{offset: -100, duration: 900}}>
         <h2>
           Projects
         </h2>
