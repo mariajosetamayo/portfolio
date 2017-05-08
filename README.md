@@ -4,4 +4,4 @@ This is the portfolio of Maria Jose Tamayo, a web developer based in Boulder, Co
 
 ## Live view
 
-https://maria-tamayo.herokuapp.com/
+https://maria-tamayo.com/
