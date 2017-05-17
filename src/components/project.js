@@ -1,5 +1,4 @@
 import React, {Component} from 'react';
-// import Carousel from 'nuka-carousel';
 
 class Project extends Component {
   constructor(props){

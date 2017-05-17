@@ -40,6 +40,10 @@ hr{
     font-size: 1.2em !important;
   }
 
+  #codewarsBadge{
+    width: 300px !important;
+  }
+
   /*.projectDescription{
     font-size: 1px !important;
   }*/

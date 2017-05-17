@@ -1,14 +1,19 @@
-import{FETCH_CODEWARS_INFO} from '../actions/types';
+import{FETCH_GITHUB_INFO} from '../actions/types';
+import{SEND_MESSAGE} from '../actions/types';
+
 
 export default function (state =
   {
-    codewarsInfo: {}
+    githubInfo: {},
+    messageSent: false
   }
 , action)
 {
   switch(action.type){
-    case FETCH_CODEWARS_INFO:
-    return {...state, codewarsInfo:action.payload}
+    case FETCH_GITHUB_INFO:
+    return {...state, githubInfo:action.payload}
+    case SEND_MESSAGE:
+    return {...state, messageSent: true}
   }
   return state;
 };
