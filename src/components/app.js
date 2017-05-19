@@ -14,6 +14,7 @@ import Contact from './contact';
 class App extends Component {
   constructor(props){
     super(props)
+    console.log('these are the props in main page', this.props.messageStatus)
   }
   componentDidMount(){
       this.props.dispatch(
@@ -28,14 +29,15 @@ class App extends Component {
         <div id="projectsSection"><ProjectsSlider /></div>
         <div id="skillsSection"><Skills /></div>
         <div id="aboutMeSection"><AboutMe /></div>
-        <div id="contactSection"><Contact /></div>
+        <div id="contactSection" ><Contact messageStatus = {this.props.messageStatus} /></div>
       </div>
     );
   }
 }
 
 const mapStateToProps = (state) => ({
-  codewarsInfo: state.app.codewarsInfo
+  githubInfo: state.app.githubInfo,
+  messageStatus: state.app.messageSent
 })
 
 export default connect (mapStateToProps)(App)
