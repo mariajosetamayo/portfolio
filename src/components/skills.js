@@ -49,13 +49,7 @@ class Skills extends Component{
           <i style={languagesIconsStyle} className="icon-reactjs"></i>
           <i style={languagesIconsStyle} className="icon-nodejs"></i>
           <i style={languagesIconsStyle} className="icon-mongodb"></i>
-
-
-
-
         </div>
-        <h2 style={secondTitleStyle}>Codewars</h2>
-        <img id="codewarsBadge" style={codewarsBadgeStyle} src={"https://www.codewars.com/users/mariajosetamayo/badges/large"} />
       </div>
     )
   }

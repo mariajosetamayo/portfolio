@@ -1,9 +1,12 @@
 import React, {Component} from 'react';
 import * as actions from '../actions/index';
 import {connect} from 'react-redux';
-import { reduxForm} from 'redux-form';
+import { reduxForm, Field} from 'redux-form';
 import {reset} from 'redux-form';
 import TextareaAutosize from 'react-textarea-autosize';
+import Captcha from './captcha.js';
+import ReCAPTCHA from "react-google-recaptcha";
+
 
 
 class EmailForm extends Component {
@@ -37,9 +40,13 @@ class EmailForm extends Component {
       this.props.signupUser(formProps);
   };
 
+  onChange(value) {
+    console.log("Captcha value:", value);
+  }
+
 
   render() {
-    const { handleSubmit, fields: { name, email, message}} = this.props;
+    const { handleSubmit, fields: { name, email, message, captcha}} = this.props;
     return (
       <div className="form-style-8">
         <h2>Send me a message</h2>
@@ -51,6 +58,7 @@ class EmailForm extends Component {
           <input type="url" name="field3" placeholder="Website" />
           <TextareaAutosize maxRows={20} placeholder="Message"  ref={ref => this.message = ref} {...message}/>
           {message.touched && message.error && <div className="error">{message.error}</div>}
+          <div className="g-recaptcha" data-sitekey="6Ld0fiIUAAAAAG7rGM4RCiYBkKbrJAqmgUVbqe_7" onChange={this.onChange.bind(this)}></div>
           <input type="button" value="Send Message" onClick={this.handleClick} />
         </form>
       </div>
@@ -84,6 +92,6 @@ const mapStateToProps = (state) => ({
 
 export default reduxForm({
   form : 'message',
-  fields: [ 'name', 'email', 'message'],
+  fields: [ 'name', 'email', 'message', 'captcha'],
   validate: validate
 }, mapStateToProps, actions)(EmailForm);
