@@ -28,15 +28,15 @@ class EmailForm extends Component {
       actions.sendMessageToMaria(message)
     )
 
-    // this.message.value = '';
-    // this.email.value = '';
-    // this.name.value = '';
+    this.message.value = '';
+    this.email.value = '';
+    this.name.value = '';
   }
 
   handleSubmit(formProps){
       this.props.signupUser(formProps);
   };
-  
+
 
   render() {
     const { handleSubmit, fields: { name, email, message}} = this.props;

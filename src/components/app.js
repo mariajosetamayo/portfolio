@@ -14,7 +14,7 @@ import Contact from './contact';
 class App extends Component {
   constructor(props){
     super(props)
-    console.log('these are the props in main page', this.props.messageStatus)
+    console.log('these are the props in main page', this.props)
   }
   componentDidMount(){
       this.props.dispatch(
@@ -29,7 +29,7 @@ class App extends Component {
         <div id="projectsSection"><ProjectsSlider /></div>
         <div id="skillsSection"><Skills /></div>
         <div id="aboutMeSection"><AboutMe /></div>
-        <div id="contactSection" ><Contact messageStatus = {this.props.messageStatus} /></div>
+        <div id="contactSection" ><Contact messageStatus = {this.props.messageStatus} messageError = {this.props.messageError} /></div>
       </div>
     );
   }
@@ -37,7 +37,8 @@ class App extends Component {
 
 const mapStateToProps = (state) => ({
   githubInfo: state.app.githubInfo,
-  messageStatus: state.app.messageSent
+  messageStatus: state.app.messageSent,
+  messageError: state.app.messageError
 })
 
 export default connect (mapStateToProps)(App)

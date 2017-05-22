@@ -1,6 +1,9 @@
 import axios  from 'axios';
-import {FETCH_GITHUB_INFO} from './types';
-import {SEND_MESSAGE} from './types';
+import {
+  FETCH_GITHUB_INFO,
+  SEND_MESSAGE,
+  MESSAGE_ERROR,
+} from './types';
 
 export function getGithubRepos(){
   return function (dispatch){
@@ -21,9 +24,24 @@ export function sendMessageToMaria(message){
     axios.post('/sendMessage', {text: message.message, subject: 'A message from your website', from: message.email})
     .then(response =>{
       console.log(response)
-      dispatch({
-        type: SEND_MESSAGE
-      })
-    });
+      if(response.data === 'request failed'){
+        dispatch(messageError('message could not be sent. Please enter a name, a valid email, and a message.'))
+      }
+      else{
+        dispatch({
+          type: SEND_MESSAGE
+        })
+      }
+    })
+    .catch((response) => {
+      dispatch(messageError('message could not be sent'))
+    })
   }
+}
+
+export function messageError (error){
+  return {
+    type: MESSAGE_ERROR,
+    payload: error
+  };
 }
