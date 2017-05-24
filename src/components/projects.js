@@ -1,10 +1,14 @@
 import React, {Component} from 'react';
 import Carousel from 'nuka-carousel';
 import Project from './project';
+import GithubRepos from './githubRepos'
 
 
 class ProjectsSlider extends Component {
-  // mixins: [Carousel.ControllerMixin]
+  constructor(props){
+    super(props)
+    console.log('these are the props in projects', props)
+  }
   render() {
     const sliderStyles = {
       marginTop: '45%',
@@ -23,6 +27,7 @@ class ProjectsSlider extends Component {
         <Project project='project1' />
         <Project project='project2' />
         <Project project='project3' />
+        <GithubRepos repos={this.props.githubInfo}/>
       </div>
     );
   }

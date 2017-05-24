@@ -16,7 +16,7 @@ class App extends Component {
     super(props)
     console.log('these are the props in main page', this.props)
   }
-  componentDidMount(){
+  componentWillMount(){
       this.props.dispatch(
         actions.getGithubRepos()
       )
@@ -26,7 +26,7 @@ class App extends Component {
       <div>
         <NavBar />
         <div id="homeSection"><Home /></div>
-        <div id="projectsSection"><ProjectsSlider /></div>
+        <div id="projectsSection"><ProjectsSlider githubInfo={this.props.githubInfo} /></div>
         <div id="skillsSection"><Skills /></div>
         <div id="aboutMeSection"><AboutMe /></div>
         <div id="contactSection" ><Contact messageStatus = {this.props.messageStatus} messageError = {this.props.messageError} /></div>

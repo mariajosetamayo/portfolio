@@ -7,7 +7,7 @@ import{
 
 export default function (state =
   {
-    githubInfo: {},
+    githubInfo: '',
     messageSent: false,
     messageError: ''
   }
