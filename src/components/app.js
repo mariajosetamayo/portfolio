@@ -15,13 +15,21 @@ class App extends Component {
   constructor(props){
     super(props)
     console.log('these are the props in main page', this.props)
+    this.state = {
+      githubRepos : []
+    }
   }
-  componentWillMount(){
+  componentDidMount(){
       this.props.dispatch(
         actions.getGithubRepos()
       )
+      this.setState ({
+        githubRepos : this.props.githubInfo
+      })
   }
+
   render() {
+    console.log('this is the state', this.props.githubInfo)
     return (
       <div>
         <NavBar />

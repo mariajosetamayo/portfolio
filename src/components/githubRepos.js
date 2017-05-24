@@ -3,11 +3,11 @@ import React, {Component} from 'react';
 class GithubRepos extends Component{
   constructor(props){
     super(props)
-    console.log('these are the props in repos', props)
+    console.log('these are the props in repos', props.repos)
   }
 
   renderRepos (){
-    // return this.props.repos.map((repo, index) => {
+    // return props.repos.map((repo, index) => {
     //   return (
     //     <div>
     //       <li key={index}>
@@ -19,6 +19,7 @@ class GithubRepos extends Component{
   }
 
   render(){
+    console.log('these are the props in repos after re-render', this.props.repos)
     return(
       <div>
         {this.renderRepos()}

@@ -9,6 +9,26 @@ class ProjectsSlider extends Component {
     super(props)
     console.log('these are the props in projects', props)
   }
+
+  // handleClick (repo){
+  //   return(
+  //     <div>
+  //       {this.props.messageStatus ? <div style={messageSentStyle}>Your message has been sent</div> : <EmailForm />}
+  //     </div>
+  //   )
+  // }
+
+  renderGithubRepos (){
+    return this.props.githubInfo.map((repo, index) => {
+      return (
+        <div>
+          <li key={index}>
+            <a>{repo.name}</a>
+          </li>
+        </div>
+      )
+    })
+  }
   render() {
     const sliderStyles = {
       marginTop: '45%',
@@ -19,6 +39,8 @@ class ProjectsSlider extends Component {
       color: '#282828',
       marginBottom: '-2%'
     }
+    console.log('these are the props in projects', this.props.githubInfo)
+
 
     return (
       <div style={sliderStyles}>
@@ -27,7 +49,7 @@ class ProjectsSlider extends Component {
         <Project project='project1' />
         <Project project='project2' />
         <Project project='project3' />
-        <GithubRepos repos={this.props.githubInfo}/>
+        {this.renderGithubRepos()}
       </div>
     );
   }
