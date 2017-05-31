@@ -15,48 +15,46 @@ class GithubRepos extends Component{
   constructor(props){
     super(props)
     console.log('these are the props in repos', this.props)
-    // this.state = {
-    //   active: false,
-    //   selectedRepo: ''
-    // }
-    // this.handleClick = this.handleClick.bind(this);
   }
 
-  // handleClick (event){
-  //   event.preventDefault()
-  //   this.setState({
-  //     active: !this.state.active,
-  //     selectedRepo: event.target.value
-  //   })
-  //   console.log(this.state)
-  // }
-
-
-  // renderGithhubRepoDetails (repo){
-  //   const stateStyle = this.state.active ? styles.active : styles.innactive;
-  //
-  //   return(
-  //     <p style={stateStyle}>URL : {repo.git_url}</p>
-  //   )
-  // }
 
   renderGithubRepos (){
+    const listItemStyles = {
+      listStyleType: 'none',
+      color: '#282828'
+    }
     return this.props.repos.map((repo, index) => {
-      // if(this.state.clickOnRepo === false){
-        return (
-          <div>
-            <li key={index}>
-              <Repo repo={repo}/>
-            </li>
-          </div>
-        )
+        if(repo.open_issues === 1 && repo.description){
+          return (
+            <div style={listItemStyles}>
+              <li key={index}>
+                <Repo repo={repo}/>
+              </li>
+            </div>
+          )
+        }
     })
   }
 
   render(){
-    console.log('these are the props in repos after re-render', this.props)
+
+    const accordeonBoxStyles = {
+      margin: '0 auto',
+      width : '80%',
+      borderRadius : '2px',
+      backgroundColor: '#ffffff',
+      boxShadow: '0px 0px 15px rgba(0, 0, 0, 0.22)'
+    }
+
+    const accordionTitleStyles = {
+      padding : '20px',
+      color : '#ffffff',
+      backgroundColor: '#4d4d4d',
+      fontSize: '27px'
+    }
     return(
-      <div>
+      <div style={accordeonBoxStyles}>
+        <h1 style={accordionTitleStyles}>Selected Github Repositories</h1>
         {this.renderGithubRepos()}
       </div>
     )
