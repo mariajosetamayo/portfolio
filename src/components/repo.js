@@ -62,9 +62,9 @@ class Repo extends Component{
 
     return (
       <div>
-        <h2 ><a href = '#' onClick={this.handleClick} style={repoTitleStyle}>{this.props.repo.name} </a></h2><i onClick={this.handleClick} style={chevronStyle} className="fa fa-chevron-down" aria-hidden="true"></i>
-        <div style={descriptionStyles}>
-          <p style={stateStyle}>Description: {this.props.repo.description}</p>
+        <h2 ><a className='repoInfo' href = '#' onClick={this.handleClick} style={repoTitleStyle}>{this.props.repo.name} </a></h2><i onClick={this.handleClick} style={chevronStyle} className="fa fa-chevron-down" aria-hidden="true"></i>
+        <div style={descriptionStyles} >
+          <p style={stateStyle} >Description: {this.props.repo.description}</p>
           <p style={stateStyle}><a style={urlStyles} href= {this.props.repo.svn_url} target="_blank">URL : {this.props.repo.svn_url}</a></p>
         </div>
       </div>

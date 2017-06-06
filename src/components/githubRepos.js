@@ -1,16 +1,6 @@
 import React, {Component} from 'react';
 import Repo from './repo'
 
-
-// const styles = {
-//   active: {
-//     display: 'inherit'
-//   },
-//   innactive: {
-//     display: 'none'
-//   }
-// }
-
 class GithubRepos extends Component{
   constructor(props){
     super(props)
@@ -40,7 +30,7 @@ class GithubRepos extends Component{
 
     const accordeonBoxStyles = {
       margin: '0 auto',
-      width : '80%',
+      width : '500px',
       borderRadius : '2px',
       backgroundColor: '#ffffff',
       boxShadow: '0px 0px 15px rgba(0, 0, 0, 0.22)'
@@ -53,7 +43,7 @@ class GithubRepos extends Component{
       fontSize: '27px'
     }
     return(
-      <div style={accordeonBoxStyles}>
+      <div style={accordeonBoxStyles} className='accordeon'>
         <h1 style={accordionTitleStyles}>Selected Github Repositories</h1>
         {this.renderGithubRepos()}
       </div>

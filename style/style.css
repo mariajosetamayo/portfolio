@@ -123,6 +123,18 @@ hr{
     width: 300px !important;
   }
 
+  .accordeon{
+    width: 300px !important;
+  }
+
+  .repoInfo{
+    font-size: 16px !important;
+  }
+
+  .fa-chevron-down{
+    padding-right: 47px !important;
+  }
+
   /*.projectDescription{
     font-size: 1px !important;
   }*/
