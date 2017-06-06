@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import NavBar from './nav-bar';
 import Home from './home';
-import ProjectsSlider from './projects';
+import Projects from './projects';
 import Skills from './skills.js';
 import {connect} from 'react-redux';
 import * as actions from '../actions';
@@ -34,7 +34,7 @@ class App extends Component {
       <div>
         <NavBar />
         <div id="homeSection"><Home /></div>
-        <div id="projectsSection"><ProjectsSlider githubInfo={this.props.githubInfo} /></div>
+        <div id="projectsSection"><Projects githubInfo={this.props.githubInfo} /></div>
         <div id="skillsSection"><Skills /></div>
         <div id="aboutMeSection"><AboutMe /></div>
         <div id="contactSection" ><Contact messageStatus = {this.props.messageStatus} messageError = {this.props.messageError} /></div>

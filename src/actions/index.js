@@ -9,7 +9,6 @@ export function getGithubRepos(){
   return function (dispatch){
     axios.get('https://api.github.com/users/mariajosetamayo/repos?page=1&per_page=100')
     .then(response => {
-      console.log('this is the response', response.data)
       dispatch({
         type: FETCH_GITHUB_INFO,
         payload: response.data

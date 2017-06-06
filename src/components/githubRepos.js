@@ -9,14 +9,11 @@ class GithubRepos extends Component{
 
 
   renderGithubRepos (){
-    const listItemStyles = {
-      listStyleType: 'none',
-      color: '#282828'
-    }
+
     return this.props.repos.map((repo, index) => {
         if(repo.open_issues === 1 && repo.description){
           return (
-            <div style={listItemStyles}>
+            <div className="githubReposListItem">
               <li key={index}>
                 <Repo repo={repo}/>
               </li>
@@ -28,23 +25,9 @@ class GithubRepos extends Component{
 
   render(){
 
-    const accordeonBoxStyles = {
-      margin: '0 auto',
-      width : '500px',
-      borderRadius : '2px',
-      backgroundColor: '#ffffff',
-      boxShadow: '0px 0px 15px rgba(0, 0, 0, 0.22)'
-    }
-
-    const accordionTitleStyles = {
-      padding : '20px',
-      color : '#ffffff',
-      backgroundColor: '#4d4d4d',
-      fontSize: '27px'
-    }
     return(
-      <div style={accordeonBoxStyles} className='accordeon'>
-        <h1 style={accordionTitleStyles}>Selected Github Repositories</h1>
+      <div className="accordeon">
+        <h1 className="accordionTitle">Selected Github Repositories</h1>
         {this.renderGithubRepos()}
       </div>
     )

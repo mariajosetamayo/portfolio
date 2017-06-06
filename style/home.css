@@ -1,0 +1,21 @@
+/*------------------------------------------------------------
+       Title styles in home
+--------------------------------------------------------------*/
+
+.titleContainer{
+  text-align: center;
+  padding-top: 238px;
+  font-size: 20px;
+}
+
+.nameTitle{
+  color: #282828;
+}
+
+.hrDivider{
+  width: 40%;
+}
+
+.professionTitle{
+  color: #707070;
+}

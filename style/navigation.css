@@ -1,0 +1,46 @@
+/*------------------------------------------------------------
+      Nav-bar styles
+--------------------------------------------------------------*/
+.logo{
+  width: 63px;
+  margin-top: 1%;
+  margin-left: 3%;
+  padding-bottom: 1%;
+}
+
+/*------------------------------------------------------------
+       Side-bar styles
+--------------------------------------------------------------*/
+
+.sideBar{
+  display: block;
+  left: auto;
+  right: 0px;
+  position: fixed;
+  top: 0;
+  height: 100%;
+  z-index: 999999;
+  width: 260px;
+  background-color: rgba(112, 112, 112, 0.9);
+  color: #FFF;
+  width: 20%;
+  text-align: center;
+}
+
+/*------------------------------------------------------------
+       Media Queries
+--------------------------------------------------------------*/
+
+@media (min-width: 0px) and (max-width: 650px) {
+  .signature{
+    margin-left: 0%;
+  }
+
+  .closeIcon{
+    padding-right: 43% !important;
+  }
+
+  .sideBar{
+    width: 39% !important;
+  }
+}

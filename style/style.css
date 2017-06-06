@@ -111,10 +111,6 @@ hr{
 
 @media (min-width: 0px) and (max-width: 650px) {
 
-  .signature{
-    margin-left: 0% !important;
-  }
-
   .fa-3x{
     font-size: 1.2em !important;
   }
@@ -123,40 +119,16 @@ hr{
     width: 300px !important;
   }
 
-  .accordeon{
-    width: 300px !important;
-  }
-
-  .repoInfo{
+  /*.repoInfo{
     font-size: 16px !important;
-  }
+  }*/
 
   .fa-chevron-down{
     padding-right: 47px !important;
   }
 
-  /*.projectDescription{
-    font-size: 1px !important;
-  }*/
-
-  /*.projectName{
-    font-size: 15px !important;
-  }*/
-
-  /*.github, .laptop{
-    font-size: 2.0em !important;
-  }*/
-
   .aboutMeSection{
     padding-top: 78px !important;
-  }
-
-  .sideBar{
-    width: 39% !important;
-  }
-
-  .closeIcon{
-    padding-right: 43% !important;
   }
 
   .fa-chevron-circle-right{

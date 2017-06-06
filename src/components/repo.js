@@ -12,7 +12,6 @@ const styles = {
 class Repo extends Component{
   constructor(props){
     super(props)
-    console.log('these are the props in repos', this.props)
     this.state = {
       active: false,
       selectedRepo: ''
@@ -26,7 +25,6 @@ class Repo extends Component{
       active: !this.state.active,
       selectedRepo: event.target.value
     })
-    console.log(this.state)
   }
 
   renderGithubRepo (){
@@ -41,31 +39,14 @@ class Repo extends Component{
       display: 'inline-block',
       float: 'right',
       fontSize: '20px'
-
-    }
-
-    const repoTitleStyle = {
-      paddingTop: '10px',
-      paddingBottom: '10px',
-      color: '#757581'
-    }
-
-    const descriptionStyles = {
-      padding: '5px 8%',
-      textShadow: '.2px .2px grey',
-      color: '#757581'
-    }
-
-    const urlStyles = {
-      color: '#757581'
     }
 
     return (
       <div>
-        <h2 ><a className='repoInfo' href = '#' onClick={this.handleClick} style={repoTitleStyle}>{this.props.repo.name} </a></h2><i onClick={this.handleClick} style={chevronStyle} className="fa fa-chevron-down" aria-hidden="true"></i>
-        <div style={descriptionStyles} >
+        <h2 ><a className='repoInfo' href = '#' onClick={this.handleClick}>{this.props.repo.name} </a></h2><i onClick={this.handleClick} style={chevronStyle} className="fa fa-chevron-down" aria-hidden="true"></i>
+        <div className="repoDescription">
           <p style={stateStyle} >Description: {this.props.repo.description}</p>
-          <p style={stateStyle}><a style={urlStyles} href= {this.props.repo.svn_url} target="_blank">URL : {this.props.repo.svn_url}</a></p>
+          <p style={stateStyle}><a className="repoUrl" href= {this.props.repo.svn_url} target="_blank">URL : {this.props.repo.name}</a></p>
         </div>
       </div>
 
@@ -73,7 +54,6 @@ class Repo extends Component{
   }
 
   render(){
-    console.log('these are the props in repos after re-render', this.props)
     return(
       <div>
         {this.renderGithubRepo()}
