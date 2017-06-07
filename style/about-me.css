@@ -1,0 +1,44 @@
+/*------------------------------------------------------------
+      About me section styles
+--------------------------------------------------------------*/
+
+.aboutMeSection{
+  text-align: center;
+  padding-top: 150px;
+}
+
+.aboutMeSectionTitle{
+  color: #282828;
+  font-size: 35px;
+}
+
+.myPhoto{
+  width: 256px;
+  border-radius: 2px;
+}
+
+.firstParagraphAboutMe{
+  padding: 3%;
+  font-size: 20px;
+  padding: 20px 8%;
+  text-align: left;
+}
+
+.secondParagraphAboutMe{
+  padding: 5%;
+  font-size: 20px;
+  margin-top: -3%;
+  margin-bottom: -26%;
+  padding: 20px 8%;
+  text-align: left;
+}
+
+/*------------------------------------------------------------
+       Media Queries
+--------------------------------------------------------------*/
+
+@media (min-width: 0px) and (max-width: 650px) {
+  .aboutMeSection{
+    padding-top: 78px !important;
+  }
+}

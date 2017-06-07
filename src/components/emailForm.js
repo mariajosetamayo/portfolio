@@ -26,7 +26,6 @@ class EmailForm extends Component {
       name: this.name.value
     }
 
-    console.log('this is the message', message)
     this.props.dispatch(
       actions.sendMessageToMaria(message)
     )
@@ -40,13 +39,19 @@ class EmailForm extends Component {
       this.props.signupUser(formProps);
   };
 
-  onChange(value) {
+  onCaptchaVerificationChange(value) {
     console.log("Captcha value:", value);
   }
 
 
   render() {
     const { handleSubmit, fields: { name, email, message, captcha}} = this.props;
+
+    const captchaStyle = {
+      transform: 'scale(0.77)',
+      transformOrigin: '0 0'
+    }
+
     return (
       <div className="form-style-8">
         <h2>Send me a message</h2>
@@ -58,7 +63,7 @@ class EmailForm extends Component {
           <input type="url" name="field3" placeholder="Website" />
           <TextareaAutosize maxRows={20} placeholder="Message"  ref={ref => this.message = ref} {...message}/>
           {message.touched && message.error && <div className="error">{message.error}</div>}
-          <div className="g-recaptcha" data-sitekey="6Ld0fiIUAAAAAG7rGM4RCiYBkKbrJAqmgUVbqe_7" onChange={this.onChange.bind(this)}></div>
+          <div className="g-recaptcha" style={captchaStyle} data-sitekey="6Ld0fiIUAAAAAG7rGM4RCiYBkKbrJAqmgUVbqe_7" onCaptchaVerificationChange={this.onCaptchaVerificationChange.bind(this)}></div>
           <input type="button" value="Send Message" onClick={this.handleClick} />
         </form>
       </div>
@@ -87,8 +92,6 @@ function validate(formProps){
 const mapStateToProps = (state) => ({
   email: state.app.messageSent
 });
-
-// export default connect(mapStateToProps)(EmailForm);
 
 export default reduxForm({
   form : 'message',

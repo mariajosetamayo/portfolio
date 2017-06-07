@@ -1,0 +1,25 @@
+/*------------------------------------------------------------
+      Skills section styles
+--------------------------------------------------------------*/
+
+.skillsDiv{
+  margin-top: 10%;
+  text-align: center;
+}
+
+.skillsTitle{
+  font-size: 40px;
+  color: #282828;
+  margin-bottom: -2%;
+}
+
+.techIcon{
+  font-size: 50px !important;
+  padding-top: 50px;
+}
+
+.languagesIcon{
+  padding-left: 30px;
+  font-size: 45px;
+  padding-top: 50px;
+}

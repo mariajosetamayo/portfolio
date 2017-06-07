@@ -1,0 +1,40 @@
+/*------------------------------------------------------------
+      Contact section styles
+--------------------------------------------------------------*/
+
+.contactSectionDiv{
+  text-align: center;
+  padding-top: 30%;
+}
+
+.contactSectionTitle{
+  color: #282828;
+  font-size: 35px;
+}
+
+.contactParagraph{
+  color: #282828;
+  font-size: 20px;
+  padding: 3%;
+}
+
+.logosDiv{
+  padding-top: 20px;
+  padding-bottom: 30px;
+}
+
+#codewarsBadge{
+  width: 280px;
+  height: auto;
+  padding-bottom: 22px;
+}
+
+/*------------------------------------------------------------
+       Media Queries
+--------------------------------------------------------------*/
+
+@media (min-width: 0px) and (max-width: 650px) {
+  #codewarsBadge{
+    width: 300px !important;
+  }
+}
