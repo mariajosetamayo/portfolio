@@ -14,7 +14,6 @@ import Contact from './contact';
 class App extends Component {
   constructor(props){
     super(props)
-    console.log('these are the props in main page', this.props)
     this.state = {
       githubRepos : []
     }
@@ -29,7 +28,7 @@ class App extends Component {
   }
 
   render() {
-    console.log('this is the state', this.props.githubInfo)
+
     return (
       <div>
         <NavBar />
