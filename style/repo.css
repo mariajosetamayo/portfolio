@@ -18,6 +18,17 @@
   color: #757581;
 }
 
+.fa-chevron-down{
+  padding-right: 96px;
+  color: #33caca;
+  width: 0px;
+  height: 0px;
+  margin-top: -43px;
+  display: inline-block;
+  float: right;
+  font-size: 20px !important;
+}
+
 /*------------------------------------------------------------
        Media Queries
 --------------------------------------------------------------*/
@@ -25,5 +36,9 @@
 @media (min-width: 0px) and (max-width: 650px) {
   .repoInfo{
     font-size: 16px;
+  }
+
+  .fa-chevron-down{
+    padding-right: 47px !important;
   }
 }

@@ -26,28 +26,15 @@ class Navbar extends Component {
   }
 
   renderLineMenu (){
-    const hamburgerIconMenu = {
-      fontSize: '2.3em',
-      float: 'right',
-      paddingRight: '3%',
-      marginTop: '1.4%',
-      color: '#434343'
-    }
-    const closeIconMenu = {
-      fontSize: '2.3em',
-      float: 'right',
-      paddingRight: '23%',
-      marginTop: '1.4%',
-      color: '#434343'
-    }
+
     if(this.state.menuVisible){
       return(
-        <i className="fa fa-close closeIcon" style = {closeIconMenu} onClick = {this.onClickMenu}></i>
+        <i className="fa fa-close closeIcon" onClick = {this.onClickMenu}></i>
       )
     }
     else{
       return(
-        <i className="fa fa-bars fa-lg" aria-hidden="true" style = {hamburgerIconMenu} onClick = {this.onClickMenu}></i>
+        <i className="fa fa-bars fa-lg hamburgerIconMenu" aria-hidden="true" onClick = {this.onClickMenu}></i>
       )
     }
   }
@@ -64,9 +51,6 @@ class Navbar extends Component {
   render (){
     const self = this
     const navBarStyle = {
-      position: 'fixed',
-      zIndex: '1',
-      width: '100%',
       backgroundColor: 'rgba(120, 144, 156,' + 0.001*self.state.distanceFromTop + ')'
     }
 

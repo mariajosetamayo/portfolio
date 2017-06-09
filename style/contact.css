@@ -29,6 +29,34 @@
   padding-bottom: 22px;
 }
 
+.messageError{
+  color: #832017;
+  padding: 10px;
+  border: solid;
+  width: 300px;
+  margin: 0 auto;
+}
+
+.websiteLinkStyle{
+  font-size: 2.5em !important;
+  color: #282828;
+  padding-left: 5%;
+}
+
+.githubLogoStyle{
+  font-size: 3.3em !important;
+  color: #282828;
+  padding-left: 4%;
+}
+
+.messageSentStyle{
+  color: #2bba4c;
+  padding: 10px;
+  border: solid;
+  width: 300px;
+  margin: 0 auto;
+}
+
 /*------------------------------------------------------------
        Media Queries
 --------------------------------------------------------------*/
