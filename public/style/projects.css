@@ -1,0 +1,14 @@
+/*------------------------------------------------------------
+       Projects Section Styles
+--------------------------------------------------------------*/
+
+.projectSectionDiv{
+  margin-top: 45%;
+  text-align: center;
+}
+
+.projectsSectionTitle{
+  font-size: 40px;
+  color: #282828;
+  margin-bottom: -2%;
+}
