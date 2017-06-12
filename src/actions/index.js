@@ -18,11 +18,9 @@ export function getGithubRepos(){
 }
 
 export function sendMessageToMaria(message){
-  console.log('it is hitting the request', message)
   return function (dispatch){
     axios.post('/sendMessage', {text: message.message, subject: 'A message from your website', from: message.email})
     .then(response =>{
-      console.log(response)
       if(response.data === 'request failed'){
         dispatch(messageError('message could not be sent. Please enter a name, a valid email, and a message.'))
       }
