@@ -1,17 +1,44 @@
-import React from 'react';
-import ReCAPTCHA from 'react-google-recaptcha';
+import React, {Component} from 'react';
+import Recaptcha from 'react-recaptcha';
+import * as actions from '../actions/index';
+import {connect} from 'react-redux';
 
-const Captcha = (props) => (
-  <div>
-    <ReCAPTCHA
-      sitekey={process.env.RECAPTCHA_SITE_KEY}
-      onChange={response => props.input.onChange(response)}
-    />
-    </div>
-);
 
-Captcha.propTypes = {
-  input: React.PropTypes.object.isRequired
-};
+const callback = function (){
+  console.log ('done!')
+}
 
-export default Captcha;
+class Captcha extends Component {
+  constructor(props){
+    super(props)
+    this.verifyCallback = this.verifyCallback.bind(this)
+  }
+
+  verifyCallback (response){
+    if(response){
+      this.props.dispatch(
+        actions.recaptchaVerification('not a robot')
+      )
+    }
+  }
+
+  render() {
+    return (
+      <div>
+        <Recaptcha
+          sitekey="6Ld0fiIUAAAAAG7rGM4RCiYBkKbrJAqmgUVbqe_7"
+          render="explicit"
+          verifyCallback={this.verifyCallback}
+          onloadCallback={callback}
+        />
+      </div>
+    );
+  }
+}
+
+const mapStateToProps = (state) => ({
+  captchaVerified: state.app.recaptchaVerified
+});
+
+
+export default connect (mapStateToProps)(Captcha);

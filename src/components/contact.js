@@ -8,7 +8,6 @@ import EmailForm from './emailForm';
 
 
   renderAlert(){
-    
     if(this.props.messageError){
       return (
         <div className="messageError">
@@ -19,7 +18,6 @@ import EmailForm from './emailForm';
   };
 
   render (){
-
     return (
       <div className="contactSectionDiv">
         <hr />

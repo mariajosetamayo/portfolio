@@ -6,9 +6,7 @@ class GithubRepos extends Component{
     super(props)
   }
 
-
   renderGithubRepos (){
-
     return this.props.repos.map((repo, index) => {
         if(repo.open_issues === 1 && repo.description){
           return (
@@ -23,7 +21,6 @@ class GithubRepos extends Component{
   }
 
   render(){
-
     return(
       <div className="accordeon">
         <h1 className="accordionTitle">Selected Github Repositories</h1>

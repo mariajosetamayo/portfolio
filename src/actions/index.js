@@ -3,6 +3,7 @@ import {
   FETCH_GITHUB_INFO,
   SEND_MESSAGE,
   MESSAGE_ERROR,
+  RECAPTCHA_VERIFICATION
 } from './types';
 
 export function getGithubRepos(){
@@ -14,6 +15,13 @@ export function getGithubRepos(){
         payload: response.data
       });
     });
+  }
+}
+
+export function recaptchaVerification(message){
+  return {
+    type: RECAPTCHA_VERIFICATION,
+    payload: message
   }
 }
 
