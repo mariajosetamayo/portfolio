@@ -5,7 +5,7 @@ import {connect} from 'react-redux';
 
 
 const callback = function (){
-  console.log ('done!')
+  console.log ('re-captcha loaded')
 }
 
 class Captcha extends Component {
@@ -24,7 +24,7 @@ class Captcha extends Component {
 
   render() {
     return (
-      <div>
+      <div className="g-recaptcha">
         <Recaptcha
           sitekey="6Ld0fiIUAAAAAG7rGM4RCiYBkKbrJAqmgUVbqe_7"
           render="explicit"
