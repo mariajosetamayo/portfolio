@@ -65,7 +65,9 @@ class EmailForm extends Component {
           <input type="url" name="field3" placeholder="Website" />
           <TextareaAutosize maxRows={20} placeholder="Message"  ref={ref => this.message = ref} {...message}/>
           {message.touched && message.error && <div className="error">{message.error}</div>}
-          <Captcha />
+          <div className="captchaDiv">
+            <Captcha />
+          </div>
           {this.state.recaptchaError ? this.renderAlert() : null}
           <input type="button" value="Send Message" onClick={this.handleClick} />
         </form>

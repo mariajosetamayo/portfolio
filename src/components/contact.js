@@ -22,7 +22,7 @@ import EmailForm from './emailForm';
       <div className="contactSectionDiv">
         <hr />
         <h1 className="contactSectionTitle">Contact</h1>
-        <p className="contactParagraph">I always look forward to hear about new projects and challenges! Here are a few ways to contact me: </p>
+        <p className="contactParagraph">I always look forward to hear about new projects and challenges! </p>
         {this.props.messageStatus ? <div className="messageSentStyle">Your message has been sent</div> : <EmailForm />}
         {this.props.messageStatus ? null : this.renderAlert()}
         <p className="logosDiv"><a href="https://github.com/mariajosetamayo" target="_blank"><i className="fa fa-github fa-lg githubLogoStyle" aria-hidden="true"></i></a><a href="https://www.linkedin.com/in/maria-tamayo-web-developer/" target="_blank"><i className="fa fa-linkedin-square websiteLinkStyle" aria-hidden="true"></i></a><a href="https://www.facebook.com/mariajose.tamayo" target="_blank"><i className="fa fa-facebook-square websiteLinkStyle" aria-hidden="true"></i></a><a href="https://www.instagram.com/mjtmayo/" target="_blank"><i className="fa fa-instagram websiteLinkStyle" aria-hidden="true"></i></a></p>

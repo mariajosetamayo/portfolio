@@ -15,7 +15,9 @@
 }
 
 .repoUrl{
-  color: #757581;
+  color: #33caca;
+  text-decoration: underline;
+  font-size: 20px;
 }
 
 .fa-chevron-down{

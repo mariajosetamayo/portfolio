@@ -51,7 +51,7 @@ class Navbar extends Component {
   render (){
     const self = this
     const navBarStyle = {
-      backgroundColor: 'rgba(120, 144, 156,' + 0.001*self.state.distanceFromTop + ')'
+      backgroundColor: 'rgba(125, 125, 125,' + 0.001*self.state.distanceFromTop + ')'
     }
 
     return(

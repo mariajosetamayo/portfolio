@@ -34,8 +34,8 @@ class Repo extends Component{
       <div>
         <h2 ><a className='repoInfo' href = '#' onClick={this.handleClick}>{this.props.repo.name} </a></h2><i onClick={this.handleClick} className="fa fa-chevron-down" aria-hidden="true"></i>
         <div className="repoDescription">
-          <p style={stateStyle} >Description: {this.props.repo.description}</p>
-          <p style={stateStyle}><a className="repoUrl" href= {this.props.repo.svn_url} target="_blank">URL : {this.props.repo.name}</a></p>
+          <p style={stateStyle} >{this.props.repo.description}</p>
+          <p style={stateStyle}><a className="repoUrl" href= {this.props.repo.svn_url} target="_blank">{this.props.repo.name}</a></p>
         </div>
       </div>
 
@@ -45,8 +45,8 @@ class Repo extends Component{
   render(){
     return(
       <div>
+        {this.props.index === 15 ? null : <hr />}
         {this.renderGithubRepo()}
-        <hr />
       </div>
 
     )

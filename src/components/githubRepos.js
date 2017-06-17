@@ -10,9 +10,9 @@ class GithubRepos extends Component{
     return this.props.repos.map((repo, index) => {
         if(repo.open_issues === 1 && repo.description){
           return (
-            <div className="githubReposListItem">
-              <li key={index}>
-                <Repo repo={repo}/>
+            <div className="githubReposListItem" key={index}>
+              <li >
+                <Repo repo={repo} index={index}/>
               </li>
             </div>
           )
@@ -23,7 +23,7 @@ class GithubRepos extends Component{
   render(){
     return(
       <div className="accordeon">
-        <h1 className="accordionTitle">Selected Github Repositories</h1>
+        <h1 className="accordionTitle">Other Select Github Repositories</h1>
         {this.renderGithubRepos()}
       </div>
     )
