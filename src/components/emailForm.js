@@ -13,7 +13,7 @@ class EmailForm extends Component {
   constructor (props){
     super (props);
     this.state = {
-      messageSent: false
+      recaptchaError: false
     }
     this.handleClick = this.handleClick.bind(this);
   }
@@ -25,28 +25,35 @@ class EmailForm extends Component {
       email: this.email.value,
       name: this.name.value
     }
-
-    this.props.dispatch(
-      actions.sendMessageToMaria(message)
-    )
-
-    this.message.value = '';
-    this.email.value = '';
-    this.name.value = '';
+    if(this.props.verifiedRecaptcha === 'not a robot'){
+      this.props.dispatch(
+        actions.sendMessageToMaria(message)
+      )
+    }else{
+      this.message.value = '';
+      this.email.value = '';
+      this.name.value = '';
+      this.setState({
+        recaptchaError: true
+      })
+    }
   }
+
+  renderAlert(){
+      return (
+        <div className="messageError">
+          <strong>Please complete the reCaptcha!</strong>
+        </div>
+      );
+  };
 
   handleSubmit(formProps){
       this.props.signupUser(formProps);
   };
 
-  onCaptchaVerificationChange(value) {
-    console.log("Captcha value:", value);
-  }
-
 
   render() {
     const { handleSubmit, fields: { name, email, message, captcha}} = this.props;
-
     return (
       <div className="form-style-8">
         <h2>Send me a message</h2>
@@ -58,7 +65,8 @@ class EmailForm extends Component {
           <input type="url" name="field3" placeholder="Website" />
           <TextareaAutosize maxRows={20} placeholder="Message"  ref={ref => this.message = ref} {...message}/>
           {message.touched && message.error && <div className="error">{message.error}</div>}
-          <div className="g-recaptcha" data-sitekey="6Ld0fiIUAAAAAG7rGM4RCiYBkKbrJAqmgUVbqe_7" onCaptchaVerificationChange={this.onCaptchaVerificationChange.bind(this)}></div>
+          <Captcha />
+          {this.state.recaptchaError ? this.renderAlert() : null}
           <input type="button" value="Send Message" onClick={this.handleClick} />
         </form>
       </div>
@@ -85,7 +93,8 @@ function validate(formProps){
 };
 
 const mapStateToProps = (state) => ({
-  email: state.app.messageSent
+  email: state.app.messageSent,
+  verifiedRecaptcha: state.app.recaptchaVerified
 });
 
 export default reduxForm({
